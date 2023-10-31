@@ -14,19 +14,15 @@ const images = [
 ];
 
 const gallery = document.querySelector(".gallery");
-const galleryEl = (array) => {
-  return array.map(({ url, alt }) => {
-    const item = document.createElement("li");
-    const img = document.createElement("img");
-    img.src = url;
-    img.alt = alt;
-    img.width = 240;
-    item.append(img);
-    return item;
-  });
-};
-// console.log(galleryEl);
-const galleryMarkup = galleryEl(images);
-console.log(galleryMarkup);
 
-gallery.append(...galleryMarkup);
+const galleryItems = ({ url, alt }) =>
+  `<li><img src="${url}" alt="${alt}" width= 280 /></li>`;
+console.dir(galleryItems);
+
+const galleryMarkup = images.reduce(
+  (acc, item) => acc + galleryItems(item),
+  []
+);
+// console.log(galleryMarkup);
+gallery.insertAdjacentHTML("afterbegin", galleryMarkup);
+console.log(gallery);
