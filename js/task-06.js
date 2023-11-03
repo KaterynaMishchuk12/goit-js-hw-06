@@ -1,17 +1,13 @@
 const input = document.querySelector("#validation-input");
 console.log(input);
 
-const validInput = document.querySelector(".validation-input.valid");
-console.log(validInput);
-
-const invalidInput = document.querySelector(".validation-input.invalid");
-console.log(invalidInput);
-
 const inputBlurHandler = (event) => {
-  if (input.value.length === Number(input.dataset.length)) {
+  if (input.value.trim().length === Number(input.dataset.length)) {
     input.classList.add("valid");
+    input.classList.remove("invalid");
   } else {
     input.classList.add("invalid");
+    input.classList.remove("valid");
   }
 };
 // console.log(inputBlurHandler);

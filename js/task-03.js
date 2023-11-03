@@ -16,13 +16,15 @@ const images = [
 const gallery = document.querySelector(".gallery");
 
 const galleryItems = ({ url, alt }) =>
-  `<li><img src="${url}" alt="${alt}" width= 280 /></li>`;
+  `<li><img class="image-item-js" src="${url}" alt="${alt}" width= 280 /></li>`;
 console.dir(galleryItems);
 
 const galleryMarkup = images.reduce(
   (acc, item) => acc + galleryItems(item),
   []
 );
-// console.log(galleryMarkup);
+console.log(galleryMarkup);
 gallery.insertAdjacentHTML("afterbegin", galleryMarkup);
 console.log(gallery);
+
+// .classList.add("image-item-js"));

@@ -5,6 +5,13 @@ ul {
 }
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
+}
+.image-item-js {
+  border-radius: 5%;
+  border-style: double;
+  border-color: green;
 }
 p {
   margin: 0;
@@ -47,4 +54,12 @@ button {
   margin: 16px 8px;
   border-style: groove;
   border-radius: 10%;
+}
+
+.task-one-item-js {
+  color: darkmagenta;
+}
+.item-js {
+  font-size: 32px;
+  color: crimson;
 }
