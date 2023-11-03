@@ -8,4 +8,4 @@ const inputHandler = (event) => {
   output.textContent = event.currentTarget.value;
 };
 input.addEventListener("input", inputHandler);
-console.log();
+

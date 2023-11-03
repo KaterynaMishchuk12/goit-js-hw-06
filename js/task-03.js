@@ -26,5 +26,3 @@ const galleryMarkup = images.reduce(
 console.log(galleryMarkup);
 gallery.insertAdjacentHTML("afterbegin", galleryMarkup);
 console.log(gallery);
-
-// .classList.add("image-item-js"));
